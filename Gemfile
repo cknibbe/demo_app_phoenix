@@ -21,5 +21,15 @@ group :production do
   gem 'pg', '0.12.2'
 end
 
+# avoid error 'no such file to load -- readLine  (LoadError)'
+gem 'rb-readline'
+
 # provide JavaScript runtime
 gem 'therubyracer', :require => 'v8'
+
+# use 'thin' instead of 'webrick'
+# avoid server warnings:
+#    Could not determine content-length of response body.
+#    Set cotent-length or seet Response#chunked = true
+# to run server: rails server thin
+gem 'thin'

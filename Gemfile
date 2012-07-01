@@ -21,5 +21,5 @@ group :production do
   gem 'pg', '0.12.2'
 end
 
-# needed this for 'first_app', need for 'demo_app'?
-#gem 'therubyracer', :require => 'v8'
+# provide JavaScript runtime
+gem 'therubyracer', :require => 'v8'
